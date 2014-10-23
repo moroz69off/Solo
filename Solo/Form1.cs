@@ -114,7 +114,11 @@ namespace Solo
         //===== Самостоятельная доработка=====================================================================
         private void buttonChengeText_Click(object sender, EventArgs e)
         {
-            openFileDialog.FileName = textFileName;  // Здесь я запутался, кнопка должна предложить выбрать другой файл и вставить содержимое файла в мою форму
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                textFileName = openFileDialog.FileName;
+                init();
+            }
         }
         //==================================================================================================
 
