@@ -31,7 +31,7 @@ namespace Solo
         {
             try
             {
-                labelSampleText.Text = File.ReadAllText(textFileName);
+                labelSampleText.Text = File.ReadAllText(textFileName, Encoding.Default);
             }
 
             catch
