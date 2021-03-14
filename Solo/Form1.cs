@@ -7,7 +7,6 @@ namespace Solo
 {
     public partial class soloForm : Form
     {
-        // Переменные========
         int totalSimbols;
         int typedSimbols;
         int speed;
@@ -15,7 +14,6 @@ namespace Solo
         DateTime currentTime;
         string messageResultVariant;
         string textFileName = "Solo.txt";
-        //====================
 
         public soloForm()
         {
@@ -93,7 +91,6 @@ namespace Solo
                 finishGame();
         }
 
-        //==== Самостоятельная доработка ======================================================================
         private void messgeresultVariant()
         {
             
@@ -101,7 +98,6 @@ namespace Solo
                 else if  (speed <= 60) messageResultVariant = " Ужасный результат! Попробуй набирать текст хотя бы двумя пальцами.";
             else messageResultVariant = " Молодец! Хорошая скорость набора.";
         }
-        //=======================================================================================================
 
         private void finishGame()
         {
@@ -111,7 +107,6 @@ namespace Solo
             init();
         }
 
-        //===== Самостоятельная доработка=====================================================================
         private void buttonChengeText_Click(object sender, EventArgs e)
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -119,12 +114,6 @@ namespace Solo
                 textFileName = openFileDialog.FileName;
                 init();
             }
-        }
-        //==================================================================================================
-
-
-
-
-        
+        }   
     }
 }
